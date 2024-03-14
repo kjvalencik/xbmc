@@ -535,6 +535,7 @@ bool CDVDVideoCodecAndroidMediaCodec::Open(CDVDStreamInfo &hints, CDVDCodecOptio
 
       if (!removeDovi && (isDvhe || isDvh1))
       {
+        removeHdr10Plus = true;
         bool displaySupportsDovi{false};
         bool mediaCodecSupportsDovi{false};
         std::tie(displaySupportsDovi, mediaCodecSupportsDovi) =
